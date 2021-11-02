@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>flaps_full.ac</path>
+
+    <!--	flaps aproach Annunciator	-->
+    <animation>
+        <type>select</type>
+        <object-name>round_ann</object-name>
+        <condition>
+            <and>
+                    <greater-than>
+                        <property>surface-positions/flap-pos-norm</property>
+                        <value>0.99</value>
+                    </greater-than>
+
+                <greater-than> 
+                    <property>/systems/electrical/volts</property>
+                    <value>16</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+</PropertyList>
+
+

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>ai.ac</path>
+
+<!--    <effect>
+        <inherits-from>Aircraft/c152/Models/Effects/interior/c152-interior-compartment</inherits-from>
+        <object-name>Aircraft</object-name>
+        <object-name>CagedIndicator</object-name>
+        <object-name>Pitch</object-name>
+        <object-name>Roll</object-name>
+        <object-name>RollReference</object-name>
+        <object-name>AdjustKnob</object-name>
+        <object-name>CageKnob</object-name>
+    </effect> 
+ 
+ <animation>
+  <type>material</type>
+  <object-name>Aircraft</object-name>
+  <object-name>CagedIndicator</object-name>
+  <object-name>Pitch</object-name>
+  <object-name>Roll</object-name>
+  <object-name>RollReference</object-name>
+  <emission>
+   <red>0.98</red>
+   <green>0.51</green>
+   <blue>0.0</blue>
+   <factor-prop>/sim/model/c152/lighting/instruments</factor-prop>
+  </emission>
+ </animation> -->
+ 
+ <animation>
+  <name>Pitch</name>
+  <type>translate</type>
+  <object-name>pitch_ind</object-name>
+  <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
+  <factor>-0.0007</factor>
+  <min-m>-0.01575</min-m>
+  <max-m>0.01575</max-m>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <name>Horizon Offset</name>
+  <type>translate</type>
+  <object-name>pitch_ind</object-name>
+  <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+  <factor>-0.0007</factor>
+  <min-m>-0.01575</min-m>
+  <max-m>0.01575</max-m>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>roll_ind</object-name>
+    <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+  <factor>-1</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>pitch_ind</object-name>
+    <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+  <factor>-0.5</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
+

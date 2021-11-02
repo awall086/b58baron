@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>alt.ac</path>
+<!--
+    <effect>
+        <inherits-from>Aircraft/c152/Models/Effects/interior/c152-interior-compartment</inherits-from>
+        <object-name>Face</object-name>
+        <object-name>inhg</object-name>
+        <object-name>Needle10000</object-name>
+        <object-name>Needle1000</object-name>
+        <object-name>Needle100</object-name>
+        <object-name>disk</object-name>
+    </effect>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>inhg</object-name>
+  <object-name>Needle10000</object-name>
+  <object-name>Needle1000</object-name>
+  <object-name>Needle100</object-name>
+  <emission>
+   <red>0.76</red>
+   <green>0.40</green>
+   <blue>0.10</blue>
+   <factor-prop>/sim/model/c152/lighting/instruments</factor-prop>
+  </emission>
+ </animation> -->
+ 
+     <!-- Altimeter -->
+ 
+    <animation>
+        <type>textranslate</type>
+        <object-name>digit100</object-name>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <step>1</step>
+        <factor>0.001</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>digit1000</object-name>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+<!--        <step>0.1</step>
+        <factor>0.0001</factor>
+        <bias>0.0001</bias> -->
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <scroll>20</scroll>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>digit10000</object-name>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+<!--        <step>0.01</step>
+        <factor>0.00001</factor>
+        <bias>0.0001</bias> -->
+        <factor>0.00001</factor>
+        <step>10000</step>
+        <scroll>20</scroll>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>needle</object-name>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <factor>0.36</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation> 
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>hg1</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <step>0.01</step>
+        <factor>10.0</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>hg10</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <step>0.1</step>
+        <factor>1.0</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>hg100</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <step>1</step>
+        <factor>0.1</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>hg1000</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <step>10</step>
+        <factor>0.01</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb1</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <step>1</step>
+        <factor>0.1</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb10</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <step>10</step>
+        <factor>0.01</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb100</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <step>100</step>
+        <factor>0.001</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb1000</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <step>1000</step>
+        <factor>0.0001</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+        
+        
+    <animation>
+       <type>knob</type>
+       <object-name>baro</object-name>
+       <property>/instrumentation/altimeter/setting-inhg</property>
+       <factor>-100</factor>
+       <axis>
+           <x>1</x>
+           <y>0</y>
+           <z>0</z>
+       </axis>
+       <center>
+           <x-m>0.0</x-m>
+           <y-m>0.03170</y-m>
+           <z-m>-0.03119</z-m>
+       </center>
+       <action>
+           <binding>
+               <command>property-adjust</command>
+               <property>/instrumentation/altimeter/setting-inhg</property>
+               <factor>0.01</factor>
+               <min>26.0</min>
+               <max>33.0</max>
+               <wrap>false</wrap>
+           </binding>
+       </action>
+       <hovered>
+           <binding>
+               <command>set-tooltip</command>
+               <tooltip-id>alt-setting</tooltip-id>
+               <label>Altimeter In Hg: %5.2f</label>
+               <property>instrumentation/altimeter/setting-inhg</property>
+           </binding>
+       </hovered>
+    </animation> 
+
+</PropertyList>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>in_transit.ac</path>
+
+    <!--	gear in transit Annunciator	-->
+    <animation>
+        <type>select</type>
+        <object-name>round_ann</object-name>
+        <condition>
+            <and>
+                <or>
+                    <and>
+                        <greater-than>
+                            <property>surface-positions/flap-pos-norm</property>
+                            <value>0</value>
+                        </greater-than>
+                        <less-than>
+                            <property>surface-positions/flap-pos-norm</property>
+                            <value>0.49</value>
+                        </less-than>
+                    </and>
+
+                    <and>
+                        <greater-than>
+                            <property>surface-positions/flap-pos-norm</property>
+                            <value>0.51</value>
+                        </greater-than>
+                        <less-than>
+                            <property>surface-positions/flap-pos-norm</property>
+                            <value>1</value>
+                        </less-than>
+                    </and>
+
+                  </or>
+                <greater-than> 
+                    <property>/systems/electrical/volts</property>
+                    <value>16</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+</PropertyList>
+
+

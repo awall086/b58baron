@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>in_transit.ac</path>
+
+    <!--	gear in transit Annunciator	-->
+    <animation>
+        <type>select</type>
+        <object-name>round_ann</object-name>
+        <condition>
+            <and>
+                <or>
+                    <and>
+                        <greater-than>
+                            <property>/gear/gear/position-norm</property>
+                            <value>0</value>
+                        </greater-than>
+                        <less-than>
+                            <property>/gear/gear/position-norm</property>
+                            <value>1.0</value>
+                        </less-than>
+                    </and>
+
+                    <and>
+                        <greater-than>
+                            <property>/gear/gear[1]/position-norm</property>
+                            <value>0</value>
+                        </greater-than>
+                        <less-than>
+                            <property>/gear/gear[1]/position-norm</property>
+                            <value>1.0</value>
+                        </less-than>
+                    </and>
+
+                    <and>
+                        <greater-than>
+                            <property>/gear/gear[2]/position-norm</property>
+                            <value>0</value>
+                        </greater-than>
+                        <less-than>
+                            <property>/gear/gear[2]/position-norm</property>
+                            <value>1.0</value>
+                        </less-than>
+                    </and>
+                </or>
+                <greater-than> 
+                    <property>/systems/electrical/volts</property>
+                    <value>16</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+</PropertyList>
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+  <name>b58baron-reflection</name>
+   <inherits-from>Effects/model-combined</inherits-from>
+  <parameters>
+    <!-- Normal Map -->
+    <normalmap-enabled type="int"> 0 </normalmap-enabled>
+    <!-- Light Map -->
+    <lightmap-enabled type="int"> 0 </lightmap-enabled>
+    <!-- Reflection -->
+    <reflection-enabled type="int"> 1 </reflection-enabled>
+    <reflect-map-enabled type="int"> 0 </reflect-map-enabled>
+    <reflection-correction type="float"> -0.01 </reflection-correction>
+    <reflection-dynamic type="int"> 1 </reflection-dynamic>
+    <texture n="4">
+      <image>Aircraft/b58baron/Models/Effects/baron_reflex_alu.png</image>
+      <filter>linear-mipmap-linear</filter>
+      <wrap-s>clamp</wrap-s>
+      <wrap-t>clamp</wrap-t>
+      <internal-format>normalized</internal-format>
+    </texture>
+    <reflection-fresnel type="float"> 0.005 </reflection-fresnel>
+    <reflection-rainbow type="float"> 0.0 </reflection-rainbow>
+    <reflection-noise type="float"> 0.05 </reflection-noise>
+    <ambient-correction type="float"> -0.05 </ambient-correction>
+    <dirt-enabled type="int"> 0 </dirt-enabled>
+  </parameters>
+</PropertyList>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>blue_switch.ac</path>
+
+    <!--	battery switch		-->
+    <animation>
+        <type>rotate</type>
+        <object-name>blue_switch</object-name>
+        <property>controls/switches/master-alt_r</property>
+        <factor>-35</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>blue_switch</object-name>
+        <visible>true</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/switches/master-alt_r</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/click</property>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>LAlt-switch</tooltip-id>
+                <label>Right Engine Alternator: %s</label>
+                <mapping>on-off</mapping>
+                <property>controls/switches/master-alt_r</property>
+            </binding>
+        </hovered>
+    </animation>
+
+</PropertyList>
+
+

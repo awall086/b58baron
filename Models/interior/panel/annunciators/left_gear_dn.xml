@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>gear_dn.ac</path>
+
+    <!--	Left main gear down Annunciator	-->
+    <animation>
+        <type>select</type>
+        <object-name>round_ann</object-name>
+        <condition>
+            <and>
+                <greater-than>
+                    <property>/gear/gear[1]/position-norm</property>
+                    <value>0.98</value>
+                </greater-than>
+                <greater-than> 
+                    <property>/systems/electrical/volts</property>
+                    <value>16</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+</PropertyList>
+
+

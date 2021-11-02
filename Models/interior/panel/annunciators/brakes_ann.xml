@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>brakes_ann.ac</path>
+
+    <!--	R Gen Annunciator	-->
+    <animation>
+        <type>select</type>
+        <object-name>brakes_ann</object-name>
+        <condition>
+            <and>
+                <property>controls/gear/brake-parking</property>
+                <property>controls/switches/master-bat</property>
+            </and>
+        </condition>
+    </animation>
+
+</PropertyList>
+
+

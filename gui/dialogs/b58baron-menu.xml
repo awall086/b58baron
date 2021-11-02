@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <default>
+
+        <menu n="10">
+            <label>Beechcraft B58 Baron</label>
+            <enabled type="bool">true</enabled>
+
+             <item>
+                <label>Autostart</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>b58baron.autostart()</script>
+                </binding>
+            </item>   
+
+            <item>
+                <label>Aircraft Options</label>
+                <binding>
+                    <command>dialog-show</command>
+                    <dialog-name>aircraft-dialog</dialog-name>
+                </binding>
+            </item>
+        </menu>	    
+
+    </default>
+
+</PropertyList>

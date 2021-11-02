@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+    <filter>
+        <name>Pitot</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <greater-than> 
+                    <property>/systems/electrical/outputs/pitot-heat</property>
+                    <value>16</value>
+                </greater-than>
+            </condition>
+            <property>controls/anti-ice/pitot-heat-switch</property>
+        </input>
+        <output>
+            <property>controls/anti-ice/pitot-heat</property>
+        </output>
+    </filter>
+
+    <filter>
+        <name>Window</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <greater-than> 
+                    <property>/systems/electrical/outputs/pitot-heat</property>
+                    <value>16</value>
+                </greater-than>
+            </condition>
+            <property>controls/anti-ice/window-heat-switch</property>
+        </input>
+        <output>
+            <property>controls/anti-ice/window-heat</property>
+        </output>
+    </filter>
+    
+    <filter>
+        <name>Surface</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <greater-than> 
+                    <property>/systems/electrical/outputs/pitot-heat</property>
+                    <value>16</value>
+                </greater-than>
+            </condition>
+            <property>controls/anti-ice/wing-heat-switch</property>
+        </input>
+        <output>
+            <property>controls/anti-ice/wing-heat</property>
+        </output>
+    </filter>
+
+    <filter>
+        <name>Propeller</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <greater-than> 
+                    <property>/systems/electrical/outputs/pitot-heat</property>
+                    <value>16</value>
+                </greater-than>
+            </condition>
+            <property>controls/anti-ice/prop-heat-switch</property>
+        </input>
+        <output>
+            <property>controls/anti-ice/prop-heat</property>
+        </output>
+    </filter>
+
+</PropertyList>

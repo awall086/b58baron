@@ -1,0 +1,50 @@
+<?xml version="1.0" ?> 
+<PropertyList> 
+    <path>gear_lever.ac</path>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>gear_lever</object-name>
+		<property>controls/gear/gear-down</property>
+		<factor>50</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>gear_lever</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/gear-down</property>
+			</binding>
+		</action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gear-switch</tooltip-id>
+                <label>landing Gear: %s</label>
+                <property>controls/gear/gear-down</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var f = getprop("/controls/gear/gear-down");
+                    if ( f == 1.00 ) return 'Down';
+                    return 'Up';
+                </script>
+            </binding>
+        </hovered>
+
+    </animation> 
+
+</PropertyList>

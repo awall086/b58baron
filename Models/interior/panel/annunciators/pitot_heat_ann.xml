@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>pitot_heat_ann.ac</path>
+
+    <!--	R Gen Annunciator	-->
+    <animation>
+        <type>select</type>
+        <object-name>pitot_heat_ann</object-name>
+        <condition>
+                <property>controls/anti-ice/pitot-heat</property>
+        </condition>
+    </animation>
+
+</PropertyList>
+
+

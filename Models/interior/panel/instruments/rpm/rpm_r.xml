@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>rpm.ac</path>
+
+    <effect>    
+        <inherits-from>Effects/glass</inherits-from>
+        <object-name>cristal</object-name>
+    </effect>
+    
+    <!-- Right Engine RPM indicator -->
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>rpm_needle</object-name>
+        <property>engines/engine[1]/rpm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>3500</ind>
+                <dep>250</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+</PropertyList>
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>oil.ac</path>
+
+    <effect>    
+        <inherits-from>Effects/glass</inherits-from>
+        <object-name>cristal</object-name>
+    </effect>
+    <!-- Left Engine oil temp indicator -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>oiltemp_needle</object-name>
+        <property>engines/engine[0]/oil-temperature-degf</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>248</ind>
+                <dep>-75</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <!-- Left Engine oil press indicator -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>oilpress_needle</object-name>
+        <property>engines/engine[0]/oil-pressure-psi</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>30</ind>
+                <dep>35</dep>
+            </entry>
+            <entry>
+                <ind>60</ind>
+                <dep>55</dep>
+            </entry>
+            <entry>
+                <ind>120</ind>
+                <dep>75</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+   </animation>
+
+</PropertyList>
+
+
