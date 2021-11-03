@@ -70,7 +70,7 @@ var autostart = func (msg=1) {
 
     # Setting levers and switches for startup
     setprop("/controls/engines/engine[0]/magnetos", 3);
-    setprop("/controls/engines/engine[0]/magnetos", 3);
+    setprop("/controls/engines/engine[1]/magnetos", 3);
     setprop("/controls/engines/engine[0]/throttle", 0.2);
     setprop("/controls/engines/engine[1]/throttle", 0.2);
     setprop("/controls/engines/engine[0]/mixture", 0.95);
@@ -78,12 +78,20 @@ var autostart = func (msg=1) {
     setprop("/controls/flight/elevator-trim", 0.0);
     setprop("/controls/switches/master-bat", 1);
 
-
+    # Turning on lights
+    setprop("/controls/lighting/nav-lights-switch", 1);
+    setprop("/controls/lighting/beacon-switch", 1);
+        
     # All set, starting engine
     setprop("/controls/engines/engine[0]/starter", 1);
     setprop("/engines/engine[0]/auto-start", 1);
     setprop("/controls/engines/engine[1]/starter", 1);
     setprop("/engines/engine[1]/auto-start", 1);
+
+    # Generators on
+    setprop("/controls/switches/master-alt_r", 1);
+    setprop("/controls/switches/master-alt_l", 1);
+
     
     var engine_running_check_delay = 5.0;
     settimer(func {
@@ -95,6 +103,8 @@ var autostart = func (msg=1) {
     	setprop("/controls/engines/engine[1]/starter", 0);
     	setprop("/engines/engine[1]/auto-start", 1);
     }, engine_running_check_delay);
+
+
 
 };
 
